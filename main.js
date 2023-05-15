@@ -16,7 +16,7 @@ btn.addEventListener('click', (e) => {
 })
 
 function start(amount) {
-    if (amount < 50 || amount > 700) {
+    if (amount < 50 || amount > 1500) {
         amount = 200
     }
     const board = document.querySelector('.board')
@@ -34,11 +34,14 @@ function start(amount) {
 
 }
 
-function setColor() {
-
+function setColor(element) {
+    const color  = getRadomColor()
+    element.style.backgroundColor = color
+    element.style.boxShadow = `0 0 2px ${color}, 0 0 10px ${color}`
 }
-function removeColor() {
-
+function removeColor(element) {
+    element.style.backgroundColor = '#1d1d1d'
+    element.style.boxShadow = '0 0 2px #111'
 }
 
 function getRadomColor() {
