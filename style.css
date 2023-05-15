@@ -55,7 +55,7 @@ body {
     margin-top: -100vh;
 }
 
-.box-input{
+.box-input {
     display: flex;
     align-items: center;
     justify-self: center;
@@ -63,7 +63,7 @@ body {
     font-size: 20px;
 }
 
-.box-value{
+.box-value {
     margin-top: 10px;
     outline: none;
     height: 30px;
@@ -71,4 +71,23 @@ body {
     padding: 5px 10px;
     font-size: 22px;
     width: 90%;
+}
+
+.square {
+    width: 16px;
+    height: 16px;
+    background-color: #1d1d1d;
+    margin: 2px;
+    box-shadow: 0 0 2px #000;
+    transition: 2s ease;
+}
+
+.square:hover {
+    transition-duration: 0s;
+}
+
+.board{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 800px;
 }

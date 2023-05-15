@@ -11,10 +11,39 @@ btn.addEventListener('click', (e) => {
     }
     else {
         container[0].classList.add('up')
-        start(value)
+        start(parseInt(value))
     }
 })
 
 function start(amount) {
-    console.log('ok')
+    if (amount < 50 || amount > 700) {
+        amount = 200
+    }
+    const board = document.querySelector('.board')
+    for (let i = 0; i < amount; i++) {
+        const square = document.createElement('div')
+        square.classList.add('square')
+        square.addEventListener('mouseover', () => {
+            setColor(square)
+        })
+        square.addEventListener('mouseleave', () => {
+            removeColor(square)
+        })
+        board.append(square)
+    }
+
+}
+
+function setColor() {
+
+}
+function removeColor() {
+
+}
+
+function getRadomColor() {
+    const colors = ['red', 'blue', 'green', 'violet',
+        '#494930', '#948204', '#d9f922', '#f9a3a3']
+    const index = Math.floor(Math.random() * colors.length)
+    return colors[index]
 }
